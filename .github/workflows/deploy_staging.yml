@@ -26,5 +26,5 @@ jobs:
       - name: Post deployment URL
         uses: thollander/actions-comment-pull-request@master
         with:
-          message: 🔗 https://${{ github.head_ref }}-dot-playground-jje.nw.r.appspot.com]
+          message: 🔗 https://${{ github.head_ref }}-dot-playground-jje.nw.r.appspot.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
