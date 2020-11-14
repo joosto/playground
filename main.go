@@ -28,5 +28,5 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-	_,_ = fmt.Fprint(w, "Hello from " + os.Getenv("CURRENT_VERSION_ID"))
+	_,_ = fmt.Fprint(w, "Hello from " + os.Getenv("GAE_VERSION"))
 }
