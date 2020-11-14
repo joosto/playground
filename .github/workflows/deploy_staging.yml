@@ -18,7 +18,7 @@ jobs:
         name: Deploy to App Engine
         uses: google-github-actions/deploy-appengine@main
         with:
-          credentials: ${{ secrets.gcp_credentials }}
+          credentials: ${{ secrets.GCP_SA_KEY }}
           promote: false
           version: ${{ github.sha }}
           project_id: playground-jje
