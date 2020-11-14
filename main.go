@@ -1,6 +1,5 @@
 package main
 
-// [START import]
 import (
 	"fmt"
 	"log"
