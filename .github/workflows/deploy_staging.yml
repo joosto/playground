@@ -18,13 +18,13 @@ jobs:
         name: Deploy to App Engine
         uses: google-github-actions/deploy-appengine@main
         with:
-          credentials: ${{ secrets.gcp_credentials }}
+          credentials: ${{ secrets.GCP_SA_KEY }}
           promote: false
-          version: ${{ github.sha }}
+          version: ${{ github.head_ref }}
           project_id: playground-jje
 
       - name: Post deployment URL
         uses: thollander/actions-comment-pull-request@master
         with:
-          message: 🔗 ${{ steps.deploy.outputs.url }}
+          message: 🔗 https://${{ github.head_ref }}-dot-playground-jje.nw.r.appspot.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
