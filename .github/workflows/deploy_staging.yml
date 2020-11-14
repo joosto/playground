@@ -20,7 +20,7 @@ jobs:
         with:
           credentials: ${{ secrets.GCP_SA_KEY }}
           promote: false
-          version: ${{ github.sha }}
+          version: ${{ github.head_ref }}
           project_id: playground-jje
 
       - name: Post deployment URL
